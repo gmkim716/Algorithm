@@ -15,3 +15,6 @@ st = new StringTokenizer(bf.readLine());
 결과 = `D[x2][y2] - D[x1-1][y2] - D[x2][y1-1] + D[x1-1][y1-1]`
 
 
+### nC2
+n개의 선택지 중에서 2개 선택
+`C[i]*(C[i]-1))/2`
