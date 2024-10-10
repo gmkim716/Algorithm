@@ -1,4 +1,4 @@
-public import java.util.ArrayList;
+import java.util.ArrayList;
 
 class Solution {
     public int[] solution(int n, int k) {
