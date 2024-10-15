@@ -7,23 +7,41 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int T = Integer.parseInt(br.readLine());
+        int T = Integer.parseInt(br.readLine().strip());
         for (int t=0; t<T; t++) {
             String[] input = br.readLine().split(" ");
-            int sum = 0;
-            for (int i=0; i<10; i++) {
-                sum += Integer.parseInt(input[i]);
+
+            int a = Integer.parseInt(input[0]);
+            int b = Integer.parseInt(input[1]);
+            int N = Integer.parseInt(input[2]);
+
+            int cnt = 0;
+            int A, B;
+            if (a < b) {
+                A = a;
+                B = b;
+            } else {
+                A = b;
+                B = a;
             }
 
-            System.out.println("#" + (t+1) + " " + Math.round(sum/10.0));
+            while (A < N) {
+                A += B;
+                cnt ++;
+            }
+
+            System.out.println("#" + (t+1) + " " + cnt);
         }
+
         br.close();
     }
 }
 
 /** 입력 값
- * 3
- * 3 17 1 39 8 41 2 32 99 2
- * 22 8 5 123 7 2 63 7 3 46
- * 6 63 2 3 58 76 21 33 8 1
+ * 5
+ * 1 2 2
+ * 1 2 3
+ * 1 2 4
+ * 1 2 5
+ * 10 7 1293
  */
