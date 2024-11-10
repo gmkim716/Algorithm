@@ -1,30 +1,20 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
-    static int T, cnt;
+    static int N, M;
+    static char[] board;
 
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        T = sc.nextInt();
+        BuffredReader br = new BufferedReader(new InputStream(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        for (int t=0; t<T; t++) {
-            cnt = 0;
-            dfs(sc.nextInt(), 0);
-            System.out.println(cnt);
-        }
-    }
+        N = Integer.parseInt(st.nextToken());  // 세로
+        M = Integer.parseInt(st.nextToken());  // 가로
 
-    static void dfs(int target, int sum) {
-        if (sum == target) {
-            cnt++;
-            return;
-        }
+        board = new char[N+1][M+1];
 
-        for (int i=1; i<=3; i++) {
-            if (sum+i <= 11) {
-                dfs(target, sum+i);
-            }
-        }
+
+
     }
 }
