@@ -49,7 +49,6 @@ public class Main {
 
         choose3(0, 0);
         System.out.println(safeArea);
-
     }
 
     static void choose3(int idx, int cnt) {
